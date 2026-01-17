@@ -1,3 +1,10 @@
+/* --- Tambahkan ini di bagian paling atas CSS Anda --- */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden; /* Mencegah halaman bisa digeser ke kanan */
+    position: relative;
+}
+
 :root {
     --primary: #557C55; /* Sage Green */
     --secondary: #FA7070; /* Soft Accent */
@@ -444,29 +451,42 @@ body {
    ========================================= */
 
 @media (max-width: 768px) {
+    .navbar {
+        padding: 0.8rem 5%; /* Sedikit lebih ramping di HP */
+    }
     /* Navbar Mobile Slide-in */
     .menu-toggle {
         display: block;
         z-index: 1100;
     }
 
+
+    
+
     .nav-links {
         position: fixed;
         top: 0;
-        right: -100%; /* Sembunyikan di kanan */
+        right: -100%; /* Sembunyikan total di luar layar kanan */
         height: 100vh;
-        width: 75%;
+        width: 280px; /* Lebar menu mobile yang ideal */
         background: var(--white);
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
+        padding-top: 80px; /* Beri ruang agar tidak tertutup header */
         align-items: center;
-        transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        transition: 0.3s ease-in-out;
+        box-shadow: -10px 0 20px rgba(0,0,0,0.1);
         z-index: 1050;
+        display: flex; /* Pastikan tetap flex namun kolom */
     }
 
     .nav-links.nav-active {
         right: 0; /* Munculkan */
+    }
+
+    .nav-links li {
+        margin: 1.5rem 0;
+        font-size: 1.2rem;
     }
 
     .nav-overlay {
@@ -487,20 +507,26 @@ body {
         opacity: 1;
     }
 
-    /* Hero Section Mobile */
+    /* Perbaikan Hero Section agar tidak berantakan */
     .hero {
         flex-direction: column-reverse;
         text-align: center;
-        padding-top: 1rem;
-        gap: 1rem;
+        padding: 1rem 5% 3rem 5%;
+        min-height: auto;
     }
 
     .hero-content h1 {
         font-size: 2.2rem;
+        margin-top: 1.5rem;
     }
 
     .hero-image {
         justify-content: center;
+    }
+
+    .hero-image img {
+        max-width: 80%; /* Gambar tidak memenuhi layar */
+        margin: 0 auto;
     }
 
     .features-preview {
@@ -529,11 +555,11 @@ body {
     .product-grid {
         /* Layout 2 Kolom Khas Mobile App (Shopee Style) */
         grid-template-columns: repeat(2, 1fr); 
-        gap: 10px;
+        gap: 12px;
     }
 
     .product-img {
-        height: 180px; /* Lebih pendek untuk mobile */
+        height: 160px; /* Lebih pendek untuk mobile */
     }
 
     .p-name {
@@ -567,5 +593,16 @@ body {
 
     .modal-details {
         padding: 1.5rem;
+    }
+}
+
+/* --- Tambahan untuk Tablet (769px - 1024px) --- */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+    
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }

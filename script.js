@@ -13,10 +13,13 @@ mobileMenuBtn.addEventListener('click', () => {
     if(navLinks.classList.contains('nav-active')){
         menuIcon.classList.remove('fa-bars');
         menuIcon.classList.add('fa-times');
+        document.body.style.overflow = 'hidden';
     } else {
         menuIcon.classList.remove('fa-times');
         menuIcon.classList.add('fa-bars');
+        document.body.style.overflow = 'auto';
     }
+    
 });
 
 // Tutup menu saat overlay diklik
@@ -32,6 +35,7 @@ function closeMenu() {
     navOverlay.classList.remove('active');
     menuIcon.classList.remove('fa-times');
     menuIcon.classList.add('fa-bars');
+    document.body.style.overflow = 'auto';
 }
 
 
