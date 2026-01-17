@@ -163,22 +163,6 @@ const products = [
     }
 ];
 
-function showPage(pageId) {
-    document.querySelectorAll('.page').forEach(page => {
-        page.classList.remove('active');
-    });
-    document.getElementById(pageId).classList.add('active');
-    
-    // Highlight Menu
-    document.querySelectorAll('.nav-links li').forEach(li => {
-        li.classList.remove('active');
-    });
-    // Kita cari link yang sesuai text-nya atau ID, karena event click simple:
-    // (Dalam kasus real, pakai data-target attribute lebih aman)
-    
-    window.scrollTo(0, 0);
-}
-
 function renderProducts(data) {
     const container = document.getElementById('productContainer');
     container.innerHTML = '';

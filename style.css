@@ -611,3 +611,130 @@ body {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+/* --- FOOTER RAMPING (30% Lebih Kecil) --- */
+.main-footer {
+    background-color: var(--primary); /* Sage Green */
+    padding: 40px 5% 15px 5%; /* Dikurangi dari 80px ke 40px */
+    margin-top: 40px;
+    color: var(--white);
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr; /* Proporsi kolom lebih rapat */
+    gap: 30px; /* Jarak antar kolom diperkecil */
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Logo di footer */
+.main-footer .logo {
+    color: var(--white);
+    font-size: 1.3rem; /* Sedikit dikecilkan */
+}
+
+.main-footer .logo span {
+    color: var(--secondary);
+}
+
+.footer-column h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem; /* Dari 1.1rem ke 0.95rem */
+    margin-bottom: 15px; /* Jarak dirapatkan */
+    color: var(--white);
+    position: relative;
+    padding-bottom: 8px;
+}
+
+/* Garis dekorasi judul kolom */
+.footer-column h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 20px; /* Garis lebih pendek */
+    height: 2px;
+    background-color: var(--secondary);
+}
+
+.footer-desc {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6; /* Spasi antar baris lebih rapat */
+    margin: 12px 0;
+    font-size: 0.85rem; /* Font diperkecil */
+    max-width: 250px;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px; /* Jarak antar list lebih rapat */
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.85rem; /* Font diperkecil */
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Hover effect */
+.footer-column ul li:hover {
+    color: var(--white);
+    transform: translateX(5px);
+}
+
+/* Sosmed Icons Compact */
+.social-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.social-links a {
+    width: 32px; /* Dari 38px ke 32px */
+    height: 32px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.social-links a:hover {
+    background: var(--white);
+    color: var(--primary);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px; /* Padding dikurangi */
+    margin-top: 30px; /* Margin dikurangi */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.75rem; /* Copywright lebih kecil */
+}
+
+/* Penyesuaian Mobile */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        text-align: center;
+    }
+    .footer-desc {
+        margin: 10px auto;
+    }
+    .footer-column h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .social-links, .footer-column ul li {
+        justify-content: center;
+    }
+}
