@@ -22,13 +22,53 @@ mobileMenuBtn.addEventListener('click', () => {
     
 });
 
-// Tutup menu saat overlay diklik
+// Event Listeners
 navOverlay.addEventListener('click', closeMenu);
 
 // Tutup menu saat link diklik (Navigasi)
 document.querySelectorAll('.nav-links li').forEach(li => {
     li.addEventListener('click', closeMenu);
 });
+
+function toggleMenu() {
+    navLinks.classList.toggle('nav-active');
+    navOverlay.classList.toggle('active');
+    
+    // Animasi Icon: Ganti dari Bars ke Times (Silang)
+    if(navLinks.classList.contains('nav-active')){
+        menuIcon.className = 'fas fa-times'; // Ubah ke icon silang
+        document.body.style.overflow = 'hidden'; // Kunci scroll agar tidak goyang
+    } else {
+        menuIcon.className = 'fas fa-bars'; // Kembalikan ke icon menu
+        document.body.style.overflow = 'auto'; // Aktifkan scroll kembali
+    }
+}
+
+function showPage(pageId) {
+    // 1. Sembunyikan semua halaman
+    document.querySelectorAll('.page').forEach(page => {
+        page.classList.remove('active');
+    });
+
+    // 2. Tampilkan halaman yang dipilih
+    const targetPage = document.getElementById(pageId);
+    if (targetPage) {
+        targetPage.classList.add('active');
+        // 3. Update URL Hash tanpa refresh (PENTING)
+        window.location.hash = pageId;
+    }
+    
+    // 4. Update status active di menu navigasi
+    document.querySelectorAll('.nav-links li').forEach(li => {
+        li.classList.remove('active');
+        // Jika teks menu mengandung nama pageId (case insensitive)
+        if(li.innerText.toLowerCase().includes(pageId)) {
+            li.classList.add('active');
+        }
+    });
+
+    window.scrollTo(0, 0);
+}
 
 function closeMenu() {
     navLinks.classList.remove('nav-active');
@@ -37,6 +77,26 @@ function closeMenu() {
     menuIcon.classList.add('fa-bars');
     document.body.style.overflow = 'auto';
 }
+
+// Fungsi untuk mengecek hash saat pertama kali load atau refresh
+function handleRouting() {
+    const currentHash = window.location.hash.replace('#', '');
+    
+    // Daftar halaman yang tersedia
+    const validPages = ['home', 'shop', 'about', 'contact'];
+    
+    if (validPages.includes(currentHash)) {
+        showPage(currentHash);
+    } else {
+        showPage('home'); // Default jika hash kosong atau ngawur
+    }
+}
+
+// Jalankan saat window selesai loading
+window.addEventListener('load', handleRouting);
+
+// Jalankan jika user klik tombol "Back/Forward" di browser
+window.addEventListener('hashchange', handleRouting);
 
 
 // --- BAGIAN 2: DATA & FUNGSI (SAMA SEPERTI SEBELUMNYA) ---
