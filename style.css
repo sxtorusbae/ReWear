@@ -6,7 +6,7 @@ html, body {
 }
 
 :root {
-    --primary: #557C55; /* Sage Green */
+    --primary: #1F79AE; /* Sage Green */
     --secondary: #FA7070; /* Soft Accent */
     --bg-light: #F8F9FA;
     --text-dark: #2D3436;
