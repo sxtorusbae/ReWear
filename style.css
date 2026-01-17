@@ -458,6 +458,7 @@ body {
     .menu-toggle {
         display: block;
         z-index: 1100;
+        position: relative;
     }
 
 
@@ -503,7 +504,7 @@ body {
     }
 
     .nav-overlay.active {
-        display: block;
+        /* display: block; */
         opacity: 1;
     }
 
