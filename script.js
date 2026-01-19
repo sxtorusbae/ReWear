@@ -457,7 +457,7 @@ function filterProducts() {
         } else {
             matchGender = item.gender === genderFilter || item.gender === 'unisex';
         }
-
+//test
         const matchSearch = item.name.toLowerCase().includes(searchInput);
 
         return matchSeller && matchGender && matchSearch;
