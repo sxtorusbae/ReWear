@@ -155,7 +155,7 @@ const products = [
         id: 6,
         name: "Kaos Band Nirvana",
         category: "b2c",
-        gender: "unisex",
+        gender: "male",
         price: 95000,
         rating: 4.6,
         seller: "Rock Vintage Store",
@@ -239,7 +239,7 @@ const products = [
         price: 230000,
         rating: 4.8,
         seller: "Lady Vintage",
-        image: "assets/Ash gray washed jeans pria.jpg"
+        image: "assets/Ash gray washed jeans Pria.jpg"
     },
     {
         id: 15,
@@ -410,6 +410,52 @@ const products = [
         rating: 4.8,
         seller: "Rare Item Store",
         image: "assets/stussy maroon red hat acc.jpg"
+    },
+    {
+        id: 32,
+        name: "Miffy Tote Bag CNY Edition",
+        category: "c2c",
+        gender: "accessories",
+        price: 135000,
+        rating: 4.8,
+        seller: "Rare Item Store",
+        image: "assets/Miffy Tote Bag CNY Edition acc.jpg"
+    },{
+        id: 33,
+        name: "Good Luck Medium Tote Bag",
+        category: "c2c",
+        gender: "accessories",
+        price: 98000,
+        rating: 4.8,
+        seller: "Rare Item Store",
+        image: "assets/Good Luck Medium Tote Bag acc.jpg"
+    },{
+        id: 34,
+        name: "Carhartt Black Sling Ba",
+        category: "c2c",
+        gender: "accessories",
+        price: 165000,
+        rating: 4.8,
+        seller: "Rare Item Store",
+        image: "assets/Carhartt Black Sling Ba acc.jpg"
+    },{
+        id: 35,
+        name: "Fishy Blue Beanie",
+        category: "c2c",
+        gender: "accessories",
+        price: 78000,
+        rating: 4.8,
+        seller: "Rare Item Store",
+        image: "assets/Fishy Blue Beanie acc.jpg"
+    },{
+        id: 36,
+        name: "Nike Baseball Cap In Navy",
+        category: "c2c",
+        gender: "accessories",
+        price: 90000,
+        rating: 4.8,
+        seller: "Haties",
+        image: "assets/Nike Baseball Cap In Navy acc.jpg"
     }
 ];
 
@@ -448,16 +494,16 @@ function filterProducts() {
 
     const filtered = products.filter(item => {
         const matchSeller = sellerFilter === 'all' || item.category === sellerFilter;
-        
         let matchGender = false;
+
         if (genderFilter === 'all') {
             matchGender = true;
-        } else if (genderFilter === 'aksesoris') {
-            matchGender = item.gender === 'aksesoris';
+        } else if (genderFilter === 'accessories') {
+            matchGender = (item.gender === 'accessories');
         } else {
-            matchGender = item.gender === genderFilter || item.gender === 'unisex';
+            matchGender = (item.gender === genderFilter || item.gender === 'unisex');
         }
-//test
+
         const matchSearch = item.name.toLowerCase().includes(searchInput);
 
         return matchSeller && matchGender && matchSearch;
