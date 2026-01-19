@@ -236,3 +236,20 @@ window.onclick = function(event) {
 document.addEventListener('DOMContentLoaded', () => {
     renderProducts(products);
 });
+
+// Animasi Scroll untuk About Us
+const observerOptions = {
+    threshold: 0.2
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.about-row').forEach(row => {
+    observer.observe(row);
+});
