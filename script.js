@@ -253,3 +253,5 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.about-row').forEach(row => {
     observer.observe(row);
 });
+
+//j
