@@ -139,7 +139,7 @@ const products = [
         price: 250000,
         rating: 5.0,
         seller: "Hype Beast Thrift",
-        image: "https://images.unsplash.com/photo-1606105961785-359553db19b7?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+        image: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTkWUYU-KJMvRhpSqovJzWDFEg2LtDgGEmwSZ8o_ASx39nhLXoIB1LMRgu2XjsTUFPs37rycx2BsdKPcPxVJ3V0f2HUAKkvWQ"
     },
     {
         id: 5,
@@ -160,6 +160,256 @@ const products = [
         rating: 4.6,
         seller: "Rock Vintage Store",
         image: "https://images.unsplash.com/photo-1503341504253-dff4815485f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 7,
+        name: "GAP Navy Tshirt Pria",
+        category: "c2c",
+        gender: "male",
+        price: 130000,
+        rating: 4.5,
+        seller: "Toko Lokal",
+        image: "assets/GAP Navy Tshirt Pria.jpg"
+    },
+    {
+        id: 8,
+        name: "Nike Jersey Pria",
+        category: "b2c",
+        gender: "male",
+        price: 110000,
+        rating: 4.7,
+        seller: "Thrift Store",
+        image: "assets/Nike Jersey Pria .jpg"
+    },
+    {
+        id: 9,
+        name: "Camo Shorts Pria ",
+        category: "c2c",
+        gender: "male",
+        price: 95000,
+        rating: 4.2,
+        seller: "Preloved Jogja",
+        image: "assets/Camo Shorts Pria.jpg"
+    },
+    {
+        id: 10,
+        name: "Adidas White Shorts",
+        category: "b2c",
+        gender: "male",
+        price: 85000,
+        rating: 4.9,
+        seller: "Vintage Elite",
+        image: "assets/Adidas white shorts pria.jpg"
+    },
+    {
+        id: 11,
+        name: "Adidas Navy Hoodie",
+        category: "c2c",
+        gender: "male",
+        price: 347000,
+        rating: 4.4,
+        seller: "Sista Thrift",
+        image: "assets/Adidas Navy Hoodie Pria.jpg"
+    },
+    {
+        id: 12,
+        name: "Adidas black shorts",
+        category: "b2c",
+        gender: "male",
+        price: 90000,
+        rating: 4.3,
+        seller: "Daily Wear",
+        image: "assets/Adidas black shorts Pria.jpg"
+    },
+    {
+        id: 13,
+        name: "Long Sleeve Stripe Shirt",
+        category: "c2c",
+        gender: "male",
+        price: 137000,
+        rating: 4.6,
+        seller: "Bro Second",
+        image: "assets/Long Sleeve Stripe shirt Pria.jpg"
+    },
+    {
+        id: 14,
+        name: "Ash Gray Washed Jeans",
+        category: "b2c",
+        gender: "male",
+        price: 230000,
+        rating: 4.8,
+        seller: "Lady Vintage",
+        image: "assets/Ash gray washed jeans pria.jpg"
+    },
+    {
+        id: 15,
+        name: "Snoopy Graphic Tee Wanita",
+        category: "c2c",
+        gender: "female",
+        price: 50000,
+        rating: 4.1,
+        seller: "Murah Meriah",
+        image: "assets/snoopy graphic tee wanita.jpg"
+    },
+    {
+        id: 16,
+        name: "Long Sleeve Navy Sweater Wanita",
+        category: "b2c",
+        gender: "female",
+        price: 145000,
+        rating: 5.0,
+        seller: "Premium Thrift",
+        image: "assets/long sleeve navy sweater wanita.jpg"
+    },
+    {
+        id: 17,
+        name: "Denim Skirt Wanita",
+        category: "c2c",
+        gender: "female",
+        price: 65000,
+        rating: 4.3,
+        seller: "OOTD Preloved",
+        image: "assets/denim skirt wanita.jpg"
+    },
+    {
+        id: 18,
+        name: "Dark Grey Ribbon Cardigan",
+        category: "b2c",
+        gender: "female",
+        price: 115000,
+        rating: 4.5,
+        seller: "Street Wear Hub",
+        image: "assets/dark grey ribbon cardigan Wanita.jpg"
+    },
+    {
+        id: 19,
+        name: "Butter Bear Light Grey Cardigan",
+        category: "c2c",
+        gender: "female",
+        price: 118000,
+        rating: 4.7,
+        seller: "Feminly Stuff",
+        image: "assets/butter bear light grey cardigan wanita.jpg"
+    },
+    {
+        id: 20,
+        name: "Navy Top With Ribbon Wanita",
+        category: "b2c",
+        gender: "female",
+        price: 56000,
+        rating: 4.6,
+        seller: "Chic Boutique",
+        image: "assets/navy top with ribbon wanita.jpg"
+    },
+    {
+        id: 21,
+        name: "Dark Grey Adidas Hoodie",
+        category: "c2c",
+        gender: "unisex",
+        price: 175000,
+        rating: 4.2,
+        seller: "Unisex Thrift",
+        image: "assets/Dark grey adidas hoodie unisex.jpg"
+    },
+    {
+        id: 22,
+        name: "Adidas Black Jersey Shorts",
+        category: "b2c",
+        gender: "unisex",
+        price: 75000,
+        rating: 4.8,
+        seller: "Formal Second",
+        image: "assets/adidas black jersey shorts unisex.jpg"
+    },
+    {
+        id: 23,
+        name: "NY Light Grey Hoodie",
+        category: "c2c",
+        gender: "unisex",
+        price: 185000,
+        rating: 4.4,
+        seller: "Ally Preloved",
+        image: "assets/NY light grey hoodie unisex.jpg"
+    },
+    {
+        id: 24,
+        name: "Carhartt Light Blue Hoodie",
+        category: "b2c",
+        gender: "unisex",
+        price: 199000,
+        rating: 4.3,
+        seller: "Urban Style",
+        image: "assets/Carhartt light blue hoodie unisex.jpg"
+    },
+    {
+        id: 25,
+        name: "White Denim Jeans",
+        category: "c2c",
+        gender: "unisex",
+        price: 190000,
+        rating: 4.5,
+        seller: "Casual Guy",
+        image: "assets/White denim jeans unisex.jpg"
+    },
+    {
+        id: 26,
+        name: "Vintage Black Shoulder Bag",
+        category: "b2c",
+        gender: "accessories",
+        price: 75000,
+        rating: 4.7,
+        seller: "Modest Wear",
+        image: "assets/Vintage black shoulder bag acc.jpg"
+    },
+    {
+        id: 27,
+        name: "Vintage Brown Chio-Chio Shoulder Bag",
+        category: "c2c",
+        gender: "accessories",
+        price: 89000,
+        rating: 4.2,
+        seller: "Simple Thrift",
+        image: "assets/Vintage brown chio chio shoulder bag acc.jpg"
+    },
+    {
+        id: 28,
+        name: "Vintage Carhartt Dark Brown Bag",
+        category: "b2c",
+        gender: "accsessories",
+        price: 97000,
+        rating: 4.9,
+        seller: "Executive Preloved",
+        image: "assets/Vintage Carhartt dark brown bag acc.jpg"
+    },
+    {
+        id: 29,
+        name: "Arcteryx White Hat",
+        category: "c2c",
+        gender: "accessories",
+        price: 140000,
+        rating: 4.6,
+        seller: "Queen Thrift",
+        image: "assets/arcteryx white hat acc.jpg"
+    },
+    {
+        id: 30,
+        name: "Stussy Navy Hat",
+        category: "b2c",
+        gender: "accessories",
+        price: 135000,
+        rating: 4.4,
+        seller: "Neutral Tone",
+        image: "assets/stussy navy hat acc.jpg"
+    },
+    {
+        id: 31,
+        name: "Stussy Maroon Red Hat",
+        category: "c2c",
+        gender: "accessories",
+        price: 99000,
+        rating: 4.8,
+        seller: "Rare Item Store",
+        image: "assets/stussy maroon red hat acc.jpg"
     }
 ];
 
@@ -198,8 +448,18 @@ function filterProducts() {
 
     const filtered = products.filter(item => {
         const matchSeller = sellerFilter === 'all' || item.category === sellerFilter;
-        const matchGender = genderFilter === 'all' || item.gender === genderFilter || item.gender === 'unisex';
+        
+        let matchGender = false;
+        if (genderFilter === 'all') {
+            matchGender = true;
+        } else if (genderFilter === 'aksesoris') {
+            matchGender = item.gender === 'aksesoris';
+        } else {
+            matchGender = item.gender === genderFilter || item.gender === 'unisex';
+        }
+
         const matchSearch = item.name.toLowerCase().includes(searchInput);
+
         return matchSeller && matchGender && matchSearch;
     });
 

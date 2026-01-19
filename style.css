@@ -5,6 +5,13 @@ html, body {
     position: relative;
 }
 
+@font-face {
+    font-family: 'FontHero'; 
+    src: url('font/Berliana\ Lovely\ Freebies.otf') format('truetype'); /* Arahkan ke lokasi file font */
+    font-weight: bold;
+    font-style: normal;
+}
+
 :root {
     --primary: #1F79AE; /* Sage Green */
     --secondary: #2D3436; /* Soft Accent */
@@ -21,7 +28,7 @@ html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     -webkit-tap-highlight-color: transparent; /* Hilangkan highlight biru di mobile */
 }
 
@@ -46,7 +53,8 @@ body {
 }
 
 .logo {
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Times New Roman', Times, serif;
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--primary);
@@ -123,7 +131,7 @@ body {
 }
 
 .hero-content h1 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'FontHero', Times, serif;
     font-size: 3.5rem;
     color: var(--primary);
     line-height: 1.1;
@@ -207,7 +215,7 @@ body {
 }
 
 .section-title {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     text-align: center;
     font-size: 2rem;
     color: var(--primary);
@@ -764,7 +772,7 @@ body {
 }
 
 .footer-column h3 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 0.95rem; /* Dari 1.1rem ke 0.95rem */
     margin-bottom: 15px; /* Jarak dirapatkan */
     color: var(--white);
