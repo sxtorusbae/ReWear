@@ -334,7 +334,7 @@ body {
     border: 1px solid rgba(31, 121, 174, 0.1);
 }
 
-/* Pastikan section impact-card memiliki background krem pada poster */
+/* Pastikan section impact-card memiliki background krem poster */
 .impact-card {
     background: #F0EDE5; 
     transition: 0.3s ease;
