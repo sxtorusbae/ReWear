@@ -544,9 +544,27 @@ body {
     overflow-y: auto;
 }
 
+/* Fix Size Gambar */
+.modal-img-container {
+    width: 350px;  /* Lebar tetap */
+    height: 350px; /* Tinggi tetap */
+    flex-shrink: 0; /* Mencegah gambar menyusut */
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+}
+
+.modal-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Gambar akan memenuhi kotak tanpa gepeng */
+}
+
 .modal-body {
     display: flex;
-    width: 100%;
+    gap: 30px;
+    padding: 20px;
+    align-items: flex-start;
 }
 
 .modal-img {
@@ -560,6 +578,48 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-grow: 1;
+}
+
+.modal-details h2 {
+    font-size: 1.8rem;
+    margin: 10px 0;
+    color: var(--text-dark);
+}
+
+.product-info-list {
+    margin: 20px 0;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.product-info-list p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: var(--text-gray);
+}
+
+/* Tombol Open In App */
+.btn-open-app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.btn-open-app:hover {
+    background-color: var(--secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .close-modal {
@@ -654,7 +714,6 @@ body {
     }
 
     .hero-content h1 {
-        font-size: 2.2rem;
         margin-top: 1.5rem;
     }
 
@@ -719,10 +778,17 @@ body {
         width: 95%;
         max-height: 85vh;
         border-radius: 12px;
+        margin: 10px;
     }
 
     .modal-body {
         flex-direction: column;
+        padding: 10px;
+    }
+
+    .modal-img-container {
+        width: 100%; /* Di HP gambar jadi lebar penuh */
+        height: 300px;
     }
 
     .modal-img {
@@ -869,5 +935,180 @@ body {
     }
     .social-links, .footer-column ul li {
         justify-content: center;
+    }
+}
+
+/* == Caruosel Event == */
+.event-carousel-container {
+    padding: 60px 5%;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.carousel-wrapper {
+    max-width: 1000px; /* Sesuaikan dengan lebar gambar kamu */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto; /* Biar tinggi mengikuti proporsi gambar asli */
+    max-height: 500px; /* Batasi tinggi maksimal di laptop */
+    object-fit: cover;
+    display: block;
+}
+
+.carousel-dots {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dot.active {
+    background-color: var(--primary);
+    transform: scale(1.2);
+}
+
+/* Responsif Mobile */
+@media (max-width: 768px) {
+    .carousel-slide img {
+        max-height: 600px; /* Di HP biasanya butuh lebih tinggi karena gambar popup bentuknya portrait/kotak */
+        object-fit: contain; /* Agar gambar popup tidak terpotong */
+        background-color: #f0f0f0; /* Opsional: warna latar jika gambar tidak memenuhi wadah */
+    }
+    
+    .carousel-wrapper {
+        border-radius: 0; /* Opsional: di HP biasanya lebih bagus full screen tanpa border radius */
+    }
+}
+
+/* --- App Promotion Styling --- */
+.app-promo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 80px 5%;
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+    border-radius: var(--border-radius);
+    margin-top: 50px;
+    gap: 40px;
+}
+
+.app-image img {
+    max-width: 300px; /* Ukuran HP agar tidak terlalu raksasa */
+    height: auto;
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.15));
+    transition: transform 0.3s ease;
+}
+
+.app-image img:hover {
+    transform: translateY(-10px);
+}
+
+.app-content {
+    max-width: 500px;
+}
+
+.app-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+
+.app-content p {
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Tombol Try our Apps */
+.btn-app {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 35px;
+    background-color: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px; /* Membuat tombol lonjong/rounded */
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: 0.3s;
+    box-shadow: 0 10px 20px rgba(31, 121, 174, 0.2);
+}
+
+.btn-app:hover {
+    background-color: var(--secondary);
+    transform: scale(1.05);
+    color: white;
+}
+
+/* Responsif Mobile */
+@media (max-width: 768px) {
+    .app-promo-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+    
+    .app-image img {
+        max-width: 220px;
+    }
+    
+    .app-content h2 {
+        font-size: 1.8rem;
+    }
+}/* --- Lokasi / Maps Styling --- */
+.map-container {
+    width: 100%;
+    height: 350px; /* Tinggi peta */
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 3px solid var(--white);
+    transition: 0.3s ease;
+}
+
+.map-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.location-row {
+    margin-bottom: 60px !important; /* Jarak bawah */
+}
+
+/* Responsif Mobile untuk Maps */
+@media (max-width: 768px) {
+    .map-container {
+        height: 250px;
+        margin-top: 20px;
+    }
+    
+    .location-row {
+        flex-direction: column !important; /* Teks di atas, peta di bawah */
     }
 }

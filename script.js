@@ -132,16 +132,6 @@ const products = [
         image: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
     },
     {
-        id: 4,
-        name: "Nike Windbreaker Vintage",
-        category: "b2c",
-        gender: "unisex",
-        price: 250000,
-        rating: 5.0,
-        seller: "Hype Beast Thrift",
-        image: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTkWUYU-KJMvRhpSqovJzWDFEg2LtDgGEmwSZ8o_ASx39nhLXoIB1LMRgu2XjsTUFPs37rycx2BsdKPcPxVJ3V0f2HUAKkvWQ"
-    },
-    {
         id: 5,
         name: "Zara Blazer Kerja",
         category: "c2c",
@@ -560,3 +550,26 @@ document.querySelectorAll('.about-row').forEach(row => {
     observer.observe(row);
 });
 
+// --- LOGIKA CAROUSEL EVENT ---
+let currentStep = 0;
+
+function currentSlide(n) {
+    const track = document.getElementById('carouselTrack');
+    const dots = document.querySelectorAll('.dot');
+    
+    currentStep = n;
+    
+    // Geser track
+    track.style.transform = `translateX(-${n * 100}%)`;
+    
+    // Update status dot aktif
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[n].classList.add('active');
+}
+
+// Opsional: Geser otomatis setiap 5 detik
+setInterval(() => {
+    currentStep++;
+    if (currentStep > 2) currentStep = 0; // Balik ke awal jika sudah slide terakhir
+    currentSlide(currentStep);
+}, 5000);

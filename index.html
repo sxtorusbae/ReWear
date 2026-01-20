@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REWEAR - Sustainable Preloved Fashion</title>
+    <link rel="icon" type="image/png" href="assets/icon.png">
     <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -52,6 +53,40 @@
                 <i class="fas fa-tags"></i>
                 <h3>Harga Terbaik</h3>
                 <p>Brand mahal, harga lokal.</p>
+            </div>
+        </div>
+
+        <div class="event-carousel-container">
+            <h2 class="section-title">Upcoming Events</h2>
+            <div class="carousel-wrapper">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-slide">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="assets/popup1.png">
+                            <img src="assets/event1.png" alt="Event 1">
+                        </picture>
+                    </div>
+                
+                    <div class="carousel-slide">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="assets/popup2.png">
+                            <img src="assets/event2.png" alt="Event 2">
+                        </picture>
+                    </div>
+                
+                    <div class="carousel-slide">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="assets/popup3.png">
+                            <img src="assets/event3.jpg" alt="Event 3">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-dots" id="carouselDots">
+                <span class="dot active" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
             </div>
         </div>
     </section>
@@ -112,6 +147,33 @@
                 </div>
             </div>
 
+            <div class="about-row location-row">
+                <div class="about-content">
+                    <span class="category-tag">Our Office</span>
+                    <h3>Location Kantor Kami</h3>
+                    <p>Kami berbasis di jantung kota Jakarta, tempat ide-ide fashion berkelanjutan dikembangkan.</p>
+                    <div class="meta-info-grid">
+                        <div class="meta-item">
+                            <i class="fas fa-map-marker-alt"></i> 
+                            Jl. Senopati No. 8, Kebayoran Baru, Jakarta Selatan
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2573733123663!2d106.80439107499048!3d-6.229761093758381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f15ac44c9afb%3A0x52b4ca35262b135f!2sJl.%20Senopati%20No.8%2C%20RW.3%2C%20Senayan%2C%20Kec.%20Kby.%20Baru%2C%20Kota%20Jakarta%20Selatan%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2012190!5e0!3m2!1sid!2sid!4v1768894824648!5m2!1sid!2sid"
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
             <div class="about-row background-row">
                 <div class="about-visual">
                     <div class="visual-box solid-style">
@@ -167,6 +229,19 @@
                     </div>
                 </div>
             </div>
+
+            <div class="app-promo-container about-row">
+                <div class="app-image">
+                    <img src="assets/app.png" alt="Rewear Mobile App">
+                </div>
+                <div class="app-content">
+                    <h2>Experience Rewear on Mobile</h2>
+                    <p>Nikmati kemudahan jual beli fashion preloved lebih cepat dan praktis melalui aplikasi kami yang sedang dalam pengembangan.</p>
+                    <a href="https://www.figma.com/proto/oigzPBlauXhdvVGUZNy4IV/Project-SIMAK?node-id=26-8&p=f&t=xzWNuZd0XQhsrEvX-1&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2&hide-ui=1" target="_blank" class="btn-app">
+                        Try our Apps <i class="fas fa-download"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -194,22 +269,27 @@
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal()">&times;</span>
             <div class="modal-body">
-                <div class="modal-img">
-                    <img id="m-img" src="" alt="">
+                <div class="modal-img-container">
+                    <img id="m-img" src="" alt="Product Image">
                 </div>
+
                 <div class="modal-details">
                     <div class="modal-tags">
                         <span id="m-type" class="badge-type"></span>
-                        <span id="m-cond" class="badge-cond"></span>
                     </div>
                     <h2 id="m-title"></h2>
-                    <p class="seller-info">Penjual: <span id="m-seller"></span> <i class="fas fa-check-circle verified"></i></p>
                     <div class="rating" id="m-rating"></div>
                     <h3 class="price" id="m-price"></h3>
-                    <p class="desc">Deskripsi: Barang original, kondisi 95% mulus, pemakaian pribadi, sudah di laundry wangi.</p>
+
+                    <div class="product-info-list">
+                        <p><strong>Penjual:</strong> <span id="m-seller"></span> <i class="fas fa-check-circle verified"></i></p>
+                        <p class="desc"><strong>Deskripsi:</strong> Barang original, kondisi sangat terawat, dan sudah melalui proses kurasi kualitas oleh tim Rewear.</p>
+                    </div>
+
                     <div class="modal-actions">
-                        <button class="btn-primary">Chat Penjual</button>
-                        <button class="btn-secondary">Beli Sekarang</button>
+                        <a href="https://www.figma.com/proto/oigzPBlauXhdvVGUZNy4IV/Project-SIMAK?node-id=26-8&p=f&t=xzWNuZd0XQhsrEvX-1&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2&hide-ui=1" target="_blank" class="btn-open-app">
+                            Open In App <i class="fas fa-mobile-alt"></i>
+                        </a>
                     </div>
                 </div>
             </div>
