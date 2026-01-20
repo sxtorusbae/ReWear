@@ -817,6 +817,16 @@ body {
     padding: 40px 5% 15px 5%; /* Dikurangi dari 80px ke 40px */
     margin-top: 40px;
     color: var(--white);
+    margin-bottom: 15px; /* Memberi jarak antara logo dan teks deskripsi */
+}
+
+/* Style khusus untuk gambar logo baru */
+.footer-logo {
+    width: 100%;        /* Agar responsif di layar kecil */
+    max-width: 150px;   /* UKURAN IDEAL: Kita batasi max 150px agar tidak kegedean */
+    height: auto;       /* Menjaga rasio asli (347x196) agar tidak gepeng */
+    object-fit: contain;
+    display: block;
 }
 
 .footer-container {
@@ -935,6 +945,15 @@ body {
     }
     .social-links, .footer-column ul li {
         justify-content: center;
+    }
+    .main-footer .logo {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    
+    .footer-logo {
+        max-width: 140px; /* Sedikit lebih kecil di HP biar manis */
     }
 }
 

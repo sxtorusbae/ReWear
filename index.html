@@ -107,17 +107,28 @@
                 </div>
                 
                 <div class="filter-group">
+                    <!-- Filter 1: Tipe Penjual (Tetap) -->
                     <select id="sellerFilter" onchange="filterProducts()">
                         <option value="all">Semua Penjual</option>
                         <option value="c2c">Individual (C2C)</option>
                         <option value="b2c">Thrift Store (B2C)</option>
                     </select>
                     
+                    <!-- Filter 2: Gender (Baru & Lebih Spesifik) -->
                     <select id="genderFilter" onchange="filterProducts()">
-                        <option value="all">Semua Kategori</option>
-                        <option value="female">Wanita</option>
+                        <option value="all">Semua Gender</option>
                         <option value="male">Pria</option>
+                        <option value="female">Wanita</option>
                         <option value="unisex">Unisex</option>
+                    </select>
+                
+                    <!-- Filter 3: Kategori Barang (Baru) -->
+                    <select id="categoryFilter" onchange="filterProducts()">
+                        <option value="all">Semua Kategori</option>
+                        <option value="top">Atasan (Top)</option>
+                        <option value="pants">Bawahan (Pants)</option>
+                        <option value="dress">Dress & Skirt</option>
+                        <option value="bag">Tas (Bag)</option>
                         <option value="accessories">Aksesoris</option>
                     </select>
                 </div>
@@ -362,7 +373,10 @@
     <footer class="main-footer">
         <div class="footer-container">
             <div class="footer-column">
-                <div class="logo">REWEAR<span>.</span></div>
+                <div class="logo">
+                    <!-- Ganti 'nama-logo-kamu.png' dengan nama file aslimu -->
+                    <img src="assets/footer.png" alt="ReWear Logo" class="footer-logo">
+                </div>
                 <p class="footer-desc">
                     PT. Rewear Indonesia Lestari<br>
                     Pelopor fashion berkelanjutan yang menghubungkan pecinta preloved di seluruh Indonesia.

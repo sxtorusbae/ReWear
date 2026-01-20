@@ -104,7 +104,8 @@ const products = [
     {
         id: 1,
         name: "Vintage Denim Jacket 90s",
-        category: "c2c",
+        sellerType: "c2c",
+        category: "top",
         gender: "unisex",
         price: 150000,
         rating: 4.8,
@@ -114,7 +115,8 @@ const products = [
     {
         id: 2,
         name: "Uniqlo Flannel Shirt",
-        category: "b2c",
+        sellerType: "b2c",
+        category: "top",
         gender: "male",
         price: 85000,
         rating: 4.5,
@@ -124,7 +126,8 @@ const products = [
     {
         id: 3,
         name: "Floral Summer Dress",
-        category: "c2c",
+        sellerType: "c2c",
+        category: "dress",
         gender: "female",
         price: 120000,
         rating: 4.9,
@@ -134,7 +137,8 @@ const products = [
     {
         id: 5,
         name: "Zara Blazer Kerja",
-        category: "c2c",
+        sellerType: "c2c",
+        category: "top",
         gender: "female",
         price: 200000,
         rating: 4.7,
@@ -144,8 +148,9 @@ const products = [
     {
         id: 6,
         name: "Kaos Band Nirvana",
-        category: "b2c",
-        gender: "male",
+        sellerType: "b2c",
+        category: "top",
+        gender: "male", // Bisa unisex, tapi kita set male sesuai konteks gambar
         price: 95000,
         rating: 4.6,
         seller: "Rock Vintage Store",
@@ -154,7 +159,8 @@ const products = [
     {
         id: 7,
         name: "GAP Navy Tshirt Pria",
-        category: "c2c",
+        sellerType: "c2c",
+        category: "top",
         gender: "male",
         price: 130000,
         rating: 4.5,
@@ -164,7 +170,8 @@ const products = [
     {
         id: 8,
         name: "Nike Jersey Pria",
-        category: "b2c",
+        sellerType: "b2c",
+        category: "top",
         gender: "male",
         price: 110000,
         rating: 4.7,
@@ -173,8 +180,9 @@ const products = [
     },
     {
         id: 9,
-        name: "Camo Shorts Pria ",
-        category: "c2c",
+        name: "Camo Shorts Pria",
+        sellerType: "c2c",
+        category: "pants",
         gender: "male",
         price: 95000,
         rating: 4.2,
@@ -184,7 +192,8 @@ const products = [
     {
         id: 10,
         name: "Adidas White Shorts",
-        category: "b2c",
+        sellerType: "b2c",
+        category: "pants",
         gender: "male",
         price: 85000,
         rating: 4.9,
@@ -194,7 +203,8 @@ const products = [
     {
         id: 11,
         name: "Adidas Navy Hoodie",
-        category: "c2c",
+        sellerType: "c2c",
+        category: "top",
         gender: "male",
         price: 347000,
         rating: 4.4,
@@ -204,7 +214,8 @@ const products = [
     {
         id: 12,
         name: "Adidas black shorts",
-        category: "b2c",
+        sellerType: "b2c",
+        category: "pants",
         gender: "male",
         price: 90000,
         rating: 4.3,
@@ -214,7 +225,8 @@ const products = [
     {
         id: 13,
         name: "Long Sleeve Stripe Shirt",
-        category: "c2c",
+        sellerType: "c2c",
+        category: "top",
         gender: "male",
         price: 137000,
         rating: 4.6,
@@ -224,7 +236,8 @@ const products = [
     {
         id: 14,
         name: "Ash Gray Washed Jeans",
-        category: "b2c",
+        sellerType: "b2c",
+        category: "pants",
         gender: "male",
         price: 230000,
         rating: 4.8,
@@ -233,8 +246,9 @@ const products = [
     },
     {
         id: 15,
-        name: "Snoopy Graphic Tee Wanita",
-        category: "c2c",
+        name: "Snoopy Graphic Tee",
+        sellerType: "c2c",
+        category: "top",
         gender: "female",
         price: 50000,
         rating: 4.1,
@@ -243,8 +257,9 @@ const products = [
     },
     {
         id: 16,
-        name: "Long Sleeve Navy Sweater Wanita",
-        category: "b2c",
+        name: "Long Sleeve Navy Sweater",
+        sellerType: "b2c",
+        category: "top",
         gender: "female",
         price: 145000,
         rating: 5.0,
@@ -254,7 +269,8 @@ const products = [
     {
         id: 17,
         name: "Denim Skirt Wanita",
-        category: "c2c",
+        sellerType: "c2c",
+        category: "dress", // Skirt masuk ke kategori Dress/Bawahan Cewek
         gender: "female",
         price: 65000,
         rating: 4.3,
@@ -264,7 +280,8 @@ const products = [
     {
         id: 18,
         name: "Dark Grey Ribbon Cardigan",
-        category: "b2c",
+        sellerType: "b2c",
+        category: "top",
         gender: "female",
         price: 115000,
         rating: 4.5,
@@ -273,8 +290,9 @@ const products = [
     },
     {
         id: 19,
-        name: "Butter Bear Light Grey Cardigan",
-        category: "c2c",
+        name: "Butter Bear Cardigan",
+        sellerType: "c2c",
+        category: "top",
         gender: "female",
         price: 118000,
         rating: 4.7,
@@ -283,8 +301,9 @@ const products = [
     },
     {
         id: 20,
-        name: "Navy Top With Ribbon Wanita",
-        category: "b2c",
+        name: "Navy Top With Ribbon",
+        sellerType: "b2c",
+        category: "top",
         gender: "female",
         price: 56000,
         rating: 4.6,
@@ -294,7 +313,8 @@ const products = [
     {
         id: 21,
         name: "Dark Grey Adidas Hoodie",
-        category: "c2c",
+        sellerType: "c2c",
+        category: "top",
         gender: "unisex",
         price: 175000,
         rating: 4.2,
@@ -304,7 +324,8 @@ const products = [
     {
         id: 22,
         name: "Adidas Black Jersey Shorts",
-        category: "b2c",
+        sellerType: "b2c",
+        category: "pants",
         gender: "unisex",
         price: 75000,
         rating: 4.8,
@@ -314,7 +335,8 @@ const products = [
     {
         id: 23,
         name: "NY Light Grey Hoodie",
-        category: "c2c",
+        sellerType: "c2c",
+        category: "top",
         gender: "unisex",
         price: 185000,
         rating: 4.4,
@@ -324,7 +346,8 @@ const products = [
     {
         id: 24,
         name: "Carhartt Light Blue Hoodie",
-        category: "b2c",
+        sellerType: "b2c",
+        category: "top",
         gender: "unisex",
         price: 199000,
         rating: 4.3,
@@ -334,7 +357,8 @@ const products = [
     {
         id: 25,
         name: "White Denim Jeans",
-        category: "c2c",
+        sellerType: "c2c",
+        category: "pants",
         gender: "unisex",
         price: 190000,
         rating: 4.5,
@@ -344,8 +368,9 @@ const products = [
     {
         id: 26,
         name: "Vintage Black Shoulder Bag",
-        category: "b2c",
-        gender: "accessories",
+        sellerType: "b2c",
+        category: "bag",
+        gender: "female",
         price: 75000,
         rating: 4.7,
         seller: "Modest Wear",
@@ -353,9 +378,10 @@ const products = [
     },
     {
         id: 27,
-        name: "Vintage Brown Chio-Chio Shoulder Bag",
-        category: "c2c",
-        gender: "accessories",
+        name: "Brown Chio-Chio Bag",
+        sellerType: "c2c",
+        category: "bag",
+        gender: "female",
         price: 89000,
         rating: 4.2,
         seller: "Simple Thrift",
@@ -363,9 +389,10 @@ const products = [
     },
     {
         id: 28,
-        name: "Vintage Carhartt Dark Brown Bag",
-        category: "b2c",
-        gender: "accsessories",
+        name: "Carhartt Dark Brown Bag",
+        sellerType: "b2c",
+        category: "bag",
+        gender: "unisex",
         price: 97000,
         rating: 4.9,
         seller: "Executive Preloved",
@@ -374,8 +401,9 @@ const products = [
     {
         id: 29,
         name: "Arcteryx White Hat",
-        category: "c2c",
-        gender: "accessories",
+        sellerType: "c2c",
+        category: "accessories",
+        gender: "unisex",
         price: 140000,
         rating: 4.6,
         seller: "Queen Thrift",
@@ -384,8 +412,9 @@ const products = [
     {
         id: 30,
         name: "Stussy Navy Hat",
-        category: "b2c",
-        gender: "accessories",
+        sellerType: "b2c",
+        category: "accessories",
+        gender: "unisex",
         price: 135000,
         rating: 4.4,
         seller: "Neutral Tone",
@@ -394,8 +423,9 @@ const products = [
     {
         id: 31,
         name: "Stussy Maroon Red Hat",
-        category: "c2c",
-        gender: "accessories",
+        sellerType: "c2c",
+        category: "accessories",
+        gender: "unisex",
         price: 99000,
         rating: 4.8,
         seller: "Rare Item Store",
@@ -404,44 +434,53 @@ const products = [
     {
         id: 32,
         name: "Miffy Tote Bag CNY Edition",
-        category: "c2c",
-        gender: "accessories",
+        sellerType: "c2c",
+        category: "bag",
+        gender: "unisex",
         price: 135000,
         rating: 4.8,
         seller: "Rare Item Store",
         image: "assets/Miffy Tote Bag CNY Edition acc.jpg"
-    },{
+    },
+    {
         id: 33,
-        name: "Good Luck Medium Tote Bag",
-        category: "c2c",
-        gender: "accessories",
+        name: "Good Luck Medium Tote",
+        sellerType: "c2c",
+        category: "bag",
+        gender: "unisex",
         price: 98000,
         rating: 4.8,
         seller: "Rare Item Store",
         image: "assets/Good Luck Medium Tote Bag acc.jpg"
-    },{
+    },
+    {
         id: 34,
-        name: "Carhartt Black Sling Ba",
-        category: "c2c",
-        gender: "accessories",
+        name: "Carhartt Black Sling Bag",
+        sellerType: "c2c",
+        category: "bag",
+        gender: "unisex",
         price: 165000,
         rating: 4.8,
         seller: "Rare Item Store",
         image: "assets/Carhartt Black Sling Ba acc.jpg"
-    },{
+    },
+    {
         id: 35,
         name: "Fishy Blue Beanie",
-        category: "c2c",
-        gender: "accessories",
+        sellerType: "c2c",
+        category: "accessories",
+        gender: "unisex",
         price: 78000,
         rating: 4.8,
         seller: "Rare Item Store",
         image: "assets/Fishy Blue Beanie acc.jpg"
-    },{
+    },
+    {
         id: 36,
-        name: "Nike Baseball Cap In Navy",
-        category: "c2c",
-        gender: "accessories",
+        name: "Nike Baseball Cap Navy",
+        sellerType: "c2c",
+        category: "accessories",
+        gender: "unisex",
         price: 90000,
         rating: 4.8,
         seller: "Haties",
@@ -453,9 +492,18 @@ function renderProducts(data) {
     const container = document.getElementById('productContainer');
     container.innerHTML = '';
 
+    if (data.length === 0) {
+        container.innerHTML = '<p style="text-align:center; width:100%; grid-column: 1/-1;">Produk tidak ditemukan.</p>';
+        return;
+    }
+
     data.forEach(product => {
-        const sellerType = product.category === 'c2c' ? 'Individual' : 'Store';
-        const sellerBadgeColor = product.category === 'c2c' ? '#557C55' : '#FA7070';
+        // Logika Badge: C2C vs B2C
+        const sellerLabel = product.sellerType === 'c2c' ? 'Individual' : 'Store';
+        const sellerBadgeColor = product.sellerType === 'c2c' ? '#557C55' : '#FA7070';
+        
+        // Logika Kategori Display (Capitalize)
+        const categoryLabel = product.category.charAt(0).toUpperCase() + product.category.slice(1);
 
         const card = document.createElement('div');
         card.classList.add('product-card');
@@ -464,7 +512,10 @@ function renderProducts(data) {
         card.innerHTML = `
             <img src="${product.image}" alt="${product.name}" class="product-img">
             <div class="product-info">
-                <span class="tag-cat" style="color:${sellerBadgeColor}">${sellerType}</span>
+                <div style="display:flex; justify-content:space-between; margin-bottom:5px;">
+                    <span class="tag-cat" style="color:${sellerBadgeColor}">${sellerLabel}</span>
+                    <span class="tag-cat" style="color:#1F79AE; background:#E3F2FD;">${categoryLabel}</span>
+                </div>
                 <h4 class="p-name">${product.name}</h4>
                 <div class="p-price">Rp ${product.price.toLocaleString('id-ID')}</div>
                 <div class="p-meta">
@@ -478,25 +529,37 @@ function renderProducts(data) {
 }
 
 function filterProducts() {
+    // Ambil semua value dari filter
+    const searchInput = document.getElementById('searchInput').value.toLowerCase();
     const sellerFilter = document.getElementById('sellerFilter').value;
     const genderFilter = document.getElementById('genderFilter').value;
-    const searchInput = document.getElementById('searchInput').value.toLowerCase();
+    const categoryFilter = document.getElementById('categoryFilter').value;
 
     const filtered = products.filter(item => {
-        const matchSeller = sellerFilter === 'all' || item.category === sellerFilter;
-        let matchGender = false;
-
-        if (genderFilter === 'all') {
-            matchGender = true;
-        } else if (genderFilter === 'accessories') {
-            matchGender = (item.gender === 'accessories');
-        } else {
-            matchGender = (item.gender === genderFilter || item.gender === 'unisex');
-        }
-
+        // 1. Filter Search (Nama)
         const matchSearch = item.name.toLowerCase().includes(searchInput);
 
-        return matchSeller && matchGender && matchSearch;
+        // 2. Filter Seller (C2C / B2C) - Menggunakan field 'sellerType'
+        const matchSeller = sellerFilter === 'all' || item.sellerType === sellerFilter;
+
+        // 3. Filter Gender (Male / Female / Unisex)
+        let matchGender = false;
+        if (genderFilter === 'all') {
+            matchGender = true;
+        } else {
+            // Logika: Jika filter 'male', tampilkan 'male' dan 'unisex'.
+            // Jika filter 'female', tampilkan 'female' dan 'unisex'.
+            if (item.gender === 'unisex') {
+                matchGender = true; 
+            } else {
+                matchGender = (item.gender === genderFilter);
+            }
+        }
+
+        // 4. Filter Kategori (Top, Pants, Bag, dll)
+        const matchCategory = categoryFilter === 'all' || item.category === categoryFilter;
+
+        return matchSearch && matchSeller && matchGender && matchCategory;
     });
 
     renderProducts(filtered);
