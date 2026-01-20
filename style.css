@@ -1112,3 +1112,74 @@ body {
         flex-direction: column !important; /* Teks di atas, peta di bawah */
     }
 }
+
+/* --- FAQ Section Styling --- */
+.faq-section {
+    padding: 100px 0;
+    background-color: var(--bg-light);
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 40px auto 0;
+}
+
+.faq-item {
+    background: var(--bg-light);
+    border-radius: 12px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.faq-question {
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.faq-question h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--secondary);
+}
+
+.faq-question i {
+    transition: 0.3s;
+    color: var(--primary);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s ease-out;
+    padding: 0 25px;
+    background: var(--white);
+}
+
+.faq-answer p {
+    padding: 20px 0;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* State Aktif untuk Accordion */
+.faq-item.active .faq-answer {
+    max-height: 200px; /* Sesuaikan dengan panjang teks */
+}
+
+.faq-item.active .faq-question {
+    background-color: var(--primary);
+}
+
+.faq-item.active .faq-question h4, 
+.faq-item.active .faq-question i {    
+    color: var(--white);
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}

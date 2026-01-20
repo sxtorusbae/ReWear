@@ -83,7 +83,7 @@ function handleRouting() {
     const currentHash = window.location.hash.replace('#', '');
     
     // Daftar halaman yang tersedia
-    const validPages = ['home', 'shop', 'about', 'contact'];
+    const validPages = ['home', 'shop', 'about', 'contact', 'faq'];
     
     if (validPages.includes(currentHash)) {
         showPage(currentHash);
@@ -573,3 +573,19 @@ setInterval(() => {
     if (currentStep > 2) currentStep = 0; // Balik ke awal jika sudah slide terakhir
     currentSlide(currentStep);
 }, 5000);
+
+document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+        const item = question.parentElement;
+        
+        // Menutup FAQ lain yang mungkin sedang terbuka (Opsional)
+        // document.querySelectorAll('.faq-item').forEach(otherItem => {
+        //     if (otherItem !== item) {
+        //         otherItem.classList.remove('active');
+        //     }
+        // });
+
+        // Toggle class active
+        item.classList.toggle('active');
+    });
+});
