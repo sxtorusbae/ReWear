@@ -1183,3 +1183,57 @@ body {
 .faq-item.active .faq-question i {
     transform: rotate(180deg);
 }
+
+/* Styling Logo di Navbar */
+.nav-logo {
+    height: 40px; /* Ukuran ideal */
+    width: auto;  /* Menjaga proporsi */
+    display: block;
+    transition: transform 0.3s ease, height 0.3s ease;
+}
+
+/* Efek saat logo dihover */
+.nav-logo:hover {
+    transform: scale(1.05);
+}
+
+/* Opsional: Jika navbar mengecil saat discroll (jika ada class sticky/scrolled) */
+.navbar.scrolled .nav-logo {
+    height: 32px; /* Sedikit mengecil saat discroll agar elegan */
+}
+
+/* Memastikan container logo tidak berantakan */
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* Styling Gambar di Section Title About */
+.about-title-image {
+    margin: 20px auto; /* Memberi jarak atas bawah dan ke tengah */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-title {
+    width: 375px;  /* Sesuai request */
+    height: 263px; /* Sesuai request */
+    object-fit: contain; /* Memastikan gambar tidak terpotong/distorsi */
+    border-radius: 15px; /* Opsional: agar sudutnya agak membulat seperti tema kita */
+    transition: transform 0.3s ease;
+}
+
+.img-title:hover {
+    transform: translateY(-5px); /* Efek melayang saat dihover */
+}
+
+/* Responsif untuk Mobile */
+@media (max-width: 480px) {
+    .img-title {
+        width: 100%;    /* Di HP, lebar gambar mengikuti layar */
+        height: auto;   /* Tinggi menyesuaikan agar tidak gepeng */
+        max-width: 320px; /* Batas maksimal di HP kecil */
+    }
+}

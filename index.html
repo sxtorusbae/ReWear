@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REWEAR - Sustainable Preloved Fashion</title>
-    <link rel="icon" type="image/png" href="assets/icon.png">
+    <title>ReWear</title>
+    <link rel="icon" type="image/png" href="assets/icon2.png">
     <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -12,7 +12,11 @@
 <body>
 
     <nav class="navbar">
-        <div class="logo">REWEAR<span>.</span></div>
+        <div class="logo">
+            <a href="#home">
+                <img src="assets/navlog.jpg" alt="ReWear Logo" class="nav-logo">
+            </a>
+        </div>
         <ul class="nav-links" id="navLinks">
             <li onclick="showPage('home')">Home</li>
             <li onclick="showPage('shop')">Shop</li>
@@ -127,7 +131,13 @@
     <section id="about" class="page">
         <div class="container">
             <div class="about-header">
-                <h2 class="section-title">Tentang REWEAR<span>.</span></h2>
+                <!-- <h2 class="section-title">Tentang REWEAR<span>.</span></h2> -->
+                <h2 class="section-title"><span></span>
+                    <div class="about-title-image">
+                        <img src="assets/about.jpg" alt="ReWear About Us" class="img-title">
+                    </div>
+                </h2>
+                    
                 <div class="title-line"></div>
             </div>
 
@@ -252,7 +262,7 @@
             <div class="contact-wrapper">
                 <div class="contact-info">
                     <h3>PT Rewear Nusantara Digital</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Jakarta Selatan, Indonesia</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Jl. Senopati No. 8, Kebayoran Baru, Jakarta Selatan, Indonesia</p>
                     <p><i class="fas fa-envelope"></i> hello@rewear.id</p>
                     <p><i class="fab fa-instagram"></i> @rewear.id</p>
                 </div>
@@ -371,6 +381,7 @@
                     <li onclick="showPage('shop')">Produk</li>
                     <li onclick="showPage('about')">About Us</li>
                     <li onclick="showPage('contact')">Contact Us</li>
+                    <li onclick="showPage('faq')">FAQ</li>
                 </ul>
             </div>
 
@@ -379,7 +390,7 @@
                 <ul class="contact-info">
                     <li><i class="fas fa-envelope"></i> hello@rewear.id</li>
                     <li><i class="fas fa-phone"></i> +62 812 3456 7890</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Jakarta Selatan, Indonesia</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Jl. Senopati No. 8, Kebayoran Baru, Jakarta Selatan, Indonesia</li>
                 </ul>
             </div>
         </div>
